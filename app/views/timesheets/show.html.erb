@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @timesheet.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @timesheet.lastname %>
+</p>
+
+<p>
+  <strong>Billing rate:</strong>
+  <%= @timesheet.billing_rate %>
+</p>
+
+<p>
+  <strong>Projects:</strong>
+  <%= @timesheet.projects.count %>
+</p>
+
+<h4>Project details</h4>
+<p>
+  <strong>Company name:</strong>
+  <%= @timesheet.projects.first.companyname %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @timesheet.projects.first.date %>
+</p>
+<p>
+  <strong>Start time:</strong>
+  <%= @timesheet.projects.first.start_time %>
+</p>
+<p>
+  <strong>End time:</strong>
+  <%= @timesheet.projects.first.end_time %>
+</p>
+
+<%= link_to 'Edit', edit_timesheet_path(@timesheet) %> |
+<%= link_to 'Back', timesheets_path %>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @company.timesheets.count %>
+</p>
+
+<% @company.timesheets.each do |timesheet| %>
+<p><%= timesheet.firstname + " " + timesheet.lastname %> <a href="/timesheets/<%= timesheet.id %>">details</a></p>
+<% end %>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

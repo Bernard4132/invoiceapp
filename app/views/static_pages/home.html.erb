@@ -1,0 +1,8 @@
+<h1>Welcome to Invoice Tracker</h1>
+<a href="/timesheets/new">Create timesheet</a>
+<a href="/companies/new" style="margin-left: 20px;">Create company</a>
+<hr>
+<h2>Companies</h2>
+<% @companies.each do |company| %>
+<p><%= company.name %> <a href="/companies/<%= company.id %>">details</a></p>
+<% end %>
